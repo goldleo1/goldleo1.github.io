@@ -7,25 +7,25 @@ order: 4
 > Welcome to my Blog!
 {: .prompt-tip }
 
-# About
+## **Profile**
+---
 
-## Profile
+##### **NAME** : 박진완 / Park Jinwan
 
-**NAME** : 박진완 / Park Jinwan
+<div style="height: 10px;"></div>
 
-**TEAM** : Deadsec
+##### **TEAM** : [Deadsec](https://deadsec.team/) / D4(friends) / ST3P(school)
 
-**EDUCATION** :
+<div style="height: 10px;"></div>
 
-- Korea Digital Media Highschool (Now) - 2024.3 ~
+##### **EDUCATION** :
 
-## Study
+- Korea Digital Media Highschool (Now) - 2024.03 ~
 
-- Python Class Pollution Detector
 
-## Awards
+## **Awards**
 
-**2024**
+##### **2024**
 
 - YISF (Youth Information Security Festival) - 장려상(6th)
 - Cyber Security Challenge, ROKA - 우수상(2th) with 맨인블랙햇
@@ -33,3 +33,8 @@ order: 4
 - 10th BISC CTF - 우수상(4th)
 - Whitehatcontest Final - with D4
 - WaRP CTF - 1th with 뽀로로
+
+## Contact
+
+- [Email](mailto:goldleo1@naver.com)
+- [X(twitter)](https://x.com/goldleo01)
