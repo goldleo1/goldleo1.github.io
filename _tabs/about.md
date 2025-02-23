@@ -32,9 +32,6 @@ order: 4
 - JBU CTF - 우수상(4th) with 맨인블랙햇
 - 10th BISC CTF - 우수상(4th)
 - Whitehatcontest Final - with D4
-
-##### **2025**
-
 - WaRP CTF - 1th with 뽀로로
 
 ## Contact
