@@ -5,7 +5,7 @@ author: goldleo1
 date: 2024-10-17 12:00:00 +0800
 categories: [hacking]
 tags: [mysql]
-pin: true
+pin: false
 ---
 
 > 이 글은 mysql 8.0을 기준으로 작성됨 (2024.10.17)
