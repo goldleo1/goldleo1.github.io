@@ -14,7 +14,7 @@ order: 4
 
 <div style="height: 10px;"></div>
 
-##### **TEAM** : [Deadsec](https://deadsec.team/) / D4(friends) / ST3P(school)
+##### **TEAM** : [Deadsec](https://deadsec.team/) / D4(friends) / ST3P(club)
 
 <div style="height: 10px;"></div>
 
@@ -32,6 +32,9 @@ order: 4
 - JBU CTF - 우수상(4th) with 맨인블랙햇
 - 10th BISC CTF - 우수상(4th)
 - Whitehatcontest Final - with D4
+
+##### **2025**
+
 - WaRP CTF - 1th with 뽀로로
 
 ## Contact
