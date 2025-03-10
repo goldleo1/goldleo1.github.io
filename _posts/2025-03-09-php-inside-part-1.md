@@ -1,6 +1,6 @@
 ---
 title: Inside PHP&colon; 배경지식 & 환경설정 (Part 1)
-description: php 7.4.33 ~ 8.1.0
+description: php 7.4.33 ~ 8.4.4(latest)
 author: goldleo1
 date: 2025-03-09 00:00:00 +0800
 categories: [cheatsheet]
@@ -128,7 +128,26 @@ ChatGPT선생님의 도움을 통해 한번 알아보았다.
 
 <embed src="/assets/code/inside-php-part-1/" type="text/html" width="800" height="600">
 
+> 몰랐는데 로컬(WEBrick, 루비)에서만 작동해서 나중에 하겠습니다.
+
 Reference[^2]
+
+## Let's download source code
+
+```sh
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y gcc g++ libxml2 libxml2-dev
+
+wget https://museum.php.net/php7/php-7.4.33.tar.gz
+tar -xvf php-7.4.33.tar.gz 1> /dev/null
+
+cd php-7.4.33/
+./configure --disable-all --enable-debug
+make
+make install
+```
+
+최신 버전(8.4.4, latest)까지는 업데이트되어있지 않지만 편하게 되어있습니다.
 
 ## Reference
 
