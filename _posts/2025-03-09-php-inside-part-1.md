@@ -4,7 +4,7 @@ description: php 7.4.33 ~ 8.4.4(latest)
 author: goldleo1
 date: 2025-03-09 00:00:00 +0800
 categories: [cheatsheet]
-tags: [web, php, rce, inside php]
+tags: [web, php, inside php]
 pin: false
 draft: true
 ---
