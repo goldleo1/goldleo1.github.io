@@ -124,9 +124,11 @@ ChatGPT선생님의 도움을 통해 한번 알아보았다.
 
 간소화 & 자동화하기 위해 linux(wsl)에서 docker를 활용하여 설치를 진행했습니다.
 
-> `<embed>`를 사용해서 임시방편으로 써놨는데 나중에 수정하겠습니다.
+> `<embed>`를 사용해서 임시방편으로 써놨는데 나중에 수정하겠습니다. (jekyll serve로 돌릴때는 ruby로 되는데 404뜨길래 주석처리 했습니다.)
 
-<embed src="/assets/code/inside-php-part-1/" type="text/html" width="800" height="600">
+
+
+<!-- <embed src="/assets/code/inside-php-part-1/" type="text/html" width="800" height="600"> -->
 
 > 몰랐는데 로컬(WEBrick, 루비)에서만 작동해서 나중에 하겠습니다.
 
