@@ -25,14 +25,18 @@ order: 4
 
 ## **Awards**
 
+##### **2025**
+
+- UofTCTF \| 🥉 (Team. Deadsec)
+
 ##### **2024**
 
-- YISF (Youth Information Security Festival) - 장려상(6th)
-- Cyber Security Challenge, ROKA - 우수상(2th) with 맨인블랙햇
-- JBU CTF - 우수상(4th) with 맨인블랙햇
-- 10th BISC CTF - 우수상(4th)
-- Whitehatcontest Final - with D4
-- WaRP CTF - 1th with 뽀로로
+- YISF  \| 장려상(6th)
+- Cyber Security Challenge, ROKA \| 🥈 (Team. 맨인블랙햇)
+- JBU CTF \| 4th (Team. 맨인블랙햇)
+- 10th BISC CTF \| 4th
+- Whitehatcontest \| Final
+- WaRP CTF \| 🥇 (Team. 뽀로로)
 
 ## Contact
 

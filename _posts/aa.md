@@ -1,3 +1,4 @@
+<!-- 2025-03-09-php-inside-part-1 -->
 ---
 title: Inside PHP&colon; 배경지식 & 환경설정 (Part 1)
 description: php 7.4.33 ~ 8.4.4(latest)
@@ -8,7 +9,6 @@ tags: [web, php, inside php]
 pin: false
 draft: true
 ---
-
 ## Before You Begin to Read
 
 이 글은 해킹을 공부하기 위해 작성하는 글로 아직 미흡한 부분이 많이 존재합니다.
@@ -125,8 +125,6 @@ ChatGPT선생님의 도움을 통해 한번 알아보았다.
 간소화 & 자동화하기 위해 linux(wsl)에서 docker를 활용하여 설치를 진행했습니다.
 
 > `<embed>`를 사용해서 임시방편으로 써놨는데 나중에 수정하겠습니다. (jekyll serve로 돌릴때는 ruby로 되는데 404뜨길래 주석처리 했습니다.)
-
-
 
 <!-- <embed src="/assets/code/inside-php-part-1/" type="text/html" width="800" height="600"> -->
 

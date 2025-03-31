@@ -1,3 +1,4 @@
+<!-- 2025-03-11-php-inside-part-2 -->
 ---
 title: Inside PHP&colon; Type Juggling (Part 2)
 description: php 7.4.33 ~ 8.4.4(latest)
