@@ -8,6 +8,11 @@ tags: [web,cheatsheet,xss]
 pin: false
 ---
 
+<script>
+location.href="/";
+// 이것도 견디지 못하는 자는 돌아가라
+</script>
+
 ```yaml
 # XSS Cheatsheet
 LastUpdate: 2025/2/23

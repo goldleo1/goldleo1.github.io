@@ -14,7 +14,7 @@ order: 4
 
 <div style="height: 10px;"></div>
 
-##### **TEAM** : [Deadsec](https://deadsec.team/) / D4(friends) / ST3P(club)
+##### **TEAM** : [Deadsec](https://deadsec.team/) / D4 / ST3P
 
 <div style="height: 10px;"></div>
 
@@ -31,12 +31,22 @@ order: 4
 
 ##### **2024**
 
-- YISF  \| 장려상(6th)
+- YISF \| 장려상(6th)
 - Cyber Security Challenge, ROKA \| 🥈 (Team. 맨인블랙햇)
 - JBU CTF \| 4th (Team. 맨인블랙햇)
 - 10th BISC CTF \| 4th
 - Whitehatcontest \| Final
 - WaRP CTF \| 🥇 (Team. 뽀로로)
+
+## **CVE**
+
+- TO BE CONTINUED
+
+## **KVE**
+
+- KVE-2025-0117
+- KVE-2025-0118
+- KVE-2025-0164, KVE-2025-0165, KVE-2025-0166
 
 ## Contact
 
