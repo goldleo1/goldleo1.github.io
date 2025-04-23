@@ -1,6 +1,6 @@
 ---
 title: Midnight Flag CTF Quals Write Up
-description: Midnight Flag CTF Quals Write Up(web/misc)
+description: Midnight Flag CTF Quals Write Up(web)
 author: goldleo1
 date: 2025-04-22 12:00:00 +0800
 categories: [ctf]
