@@ -27,8 +27,8 @@ order: 4
 
 ##### **2025**
 
-- UofTCTF \| 🥉 (Team. Deadsec)
 - CCE 2025 \| 🥇 (Team. Hide on /bin/sh)
+- UofTCTF \| 🥉 (Team. Deadsec)
 
 ##### **2024**
 
