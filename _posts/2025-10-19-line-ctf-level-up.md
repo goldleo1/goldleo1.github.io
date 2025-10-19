@@ -28,6 +28,8 @@ I learned many new techniques, such as `crlf chars are replaced to underscore`.
 
 ### Analysis
 
+**Bot's Behavior**
+
 Bot will register sites using `ADMIN_USERNAME` and `ADMIN_PASSWORD` with a random character suffix and write a post containing the flag.
 
 ```js
@@ -50,6 +52,10 @@ async function visit(url) {
   ...
 }
 ```
+
+---
+
+**Server's Behavior**
 
 ```js
 app.use((req, res, next) => {
@@ -80,7 +86,6 @@ app.use((req, res, next) => {
 
 ...
 
-app.use('/static', express.static(path.join(__dirname, 'static')))
 app.use('/register', require('./routes/register'));
 app.use('/bot', require('./routes/bot'));
 app.use('/', require('./routes/index'));
@@ -99,9 +104,7 @@ route.get('/', (req, res) => {
 
 route.post('/', async (req, res) => {
   let next = req.query.next || '/';
-  if (req.user) {
-    return res.redirect(`${next}?msg=Already logged in ${req.user.username}`);
-  }
+  if (req.user) { return res.redirect(`${next}?msg=Already logged in ${req.user.username}`); }
   const { username, password } = req.body;
   if (!username || !password || typeof username !== 'string' || typeof password !== 'string') return res.redirect(`/register?msg=Invalid data`);
   let account = await get(dbAccount, username);
@@ -155,10 +158,6 @@ const dbAccount = db.sublevel('account');
 const dbSession = db.sublevel('session');
 
 async function get(db, key) {
-  for await (const key of db.keys()) {
-    console.log(key);
-  }
-
   try {
     return await db.get(key);
   } catch {
@@ -167,22 +166,15 @@ async function get(db, key) {
 }
 ```
 
-`db.sublevel()` has very interesting behavior.
-
-`sublevel` sublevel appends a prefix in the format `![sublevel_name]!`.
+The `db.sublevel()` has very interesting behavior - it appends a prefix `![sublevel_name]!`.
 
 For example, `dbAccount.put("username", {})` will saved as `!account!username={}` in real database file.
 (`database/production/*.ldb`)
 
-The `db` can access sublevels by adding the prefix directly. - `get(db, "!account!username")`
+The `db` can access sublevels by adding the prefix directly - `get(db, "!account!username")`.
 
 ```js
 // routes/index.js
-
-route.use((req, res, next) => {
-  if (!req.user) return res.redirect(`/register?msg=You need to login`);
-  next();
-});
 
 route.get('/', async (req, res) => {
   const search = (req.query.s || '');
@@ -217,21 +209,14 @@ route.get('/post/:id', async (req, res) => {
 });
 ```
 
-`/` endpoint checks whether the post is including `req.query.s` and render the page `index`.
-
-When rendering the posts, `index.ejs` uses an iframe to load each post, so we can use `Frame Counting`, which uses `window.length` as an oracle for `XS-Leaks`.
-
-But since COOP header is set, so we should add `<iframe src="ATTACKER_SERVER">` and use `window.top.length` to achieve Frame Counting.
+`/` endpoint returns every post which includes `req.query.s` and render the `views/index.ejs`.
 
 ```html
 <!-- views/index.ejs -->
 <script nonce="<%- nonce %>">
   window.user = <%- JSON.stringify(user) %>;
   window.onload = async () => {
-    const search = new URLSearchParams(window.location.search);
-    document.getElementById('search').value = search.get('search');
-    document.getElementById('csrf').value = window.user.csrf;
-    document.getElementById('username').textContent = window.user.username;
+    ...
     const { posts } = window.user;
     const root = document.getElementById('root');
     for (let i = 0; i < posts.length; ++i) {
@@ -244,19 +229,24 @@ But since COOP header is set, so we should add `<iframe src="ATTACKER_SERVER">` 
 </script>
 ```
 
+When rendering the post, `index.ejs` uses an iframe to load each post, allowing us to perform [Frame Counting](https://xsleaks.dev/docs/attacks/frame-counting/) - that uses `window.length` as an oracle for `XS-Leaks`.
+
+Since the COOP header is set, we can insert `<iframe src="ATTACKER_SERVER">` into a post and use `window.top.length` to perform frame counting.
+
 To write post, we should send POST request to `/` with `csrf` token.
 
-And in `/post/:id`, we are able to read post with only id. (no validation whether the post is user's)
-
-Since `clean()` is sanitizing single quote, normal html injection is not available.
-
-So use unicode (`ȧ><h1>123</h1>`) to inject HTML
-
 ```html
+<!-- views/post.ejs -->
 <meta charset="ascii">
 <link rel="stylesheet" href="/static/post.css">
 <input value='<%- content %>'>
 ```
+
+And in `/post/:id`, we are able to read post with only id. (no validation whether the post is user's)
+
+But since `clean()` sanitizes single quote, normal html injection (escaping single quote) is not available.
+
+So use unicode (`ȧ><h1>123</h1>`) to inject HTML
 
 Interestingly, the code uses `db` to read/write post instead of `dbPost`.
 
@@ -267,11 +257,11 @@ _fun_
 
 ### Final Solution
 
-1. Leak **bot's username** using open redirect
+1. **Leak bot's username** using open redirect
 
-2. Leak csrf token using `!account![username]`
+2. **Leak csrf token** using `!account![username]`
 
-3. HTML Injection -> Frame Counting via window.top.length
+3. **HTML Injection** -> **Frame Counting** via `window.top.length`
 
 ### Exploit
 
