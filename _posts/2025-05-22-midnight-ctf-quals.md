@@ -138,7 +138,7 @@ Payload : `http://localhost:8080:`
 
 XSS & postmessage
 
-`postplayground`에서는 언인텐이 터져서 One님이 바로 푸셨다.
+`postplayground`는 언인텐이 터져서 One님이 바로 푸셨다.
 
 ![alt text](/assets/img/2025-04-23 12-02-06.png)
 
