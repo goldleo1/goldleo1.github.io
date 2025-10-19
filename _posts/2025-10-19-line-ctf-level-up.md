@@ -271,9 +271,7 @@ _fun_
 
 2. Leak csrf token using `!account![username]`
 
-3. HTML Injection
-
-4. Frame Counting
+3. HTML Injection -> Frame Counting via window.top.length
 
 ### Exploit
 
