@@ -258,7 +258,7 @@ So use unicode (`ȧ><h1>123</h1>`) to inject HTML
 <input value='<%- content %>'>
 ```
 
-Interestingly, the code uses `db` instead of `dbPost`.
+Interestingly, the code uses `db` to read/write post instead of `dbPost`.
 
 So we can leak bot's csrf token with leaked bot's username. (this is similar to common Redis vulnerabilities)
 
