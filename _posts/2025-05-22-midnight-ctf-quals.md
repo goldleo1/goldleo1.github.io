@@ -121,7 +121,7 @@ if ($len_content > 0) {
     die("Empty reply from server");
 }
 
-?>
+?>w
 ```
 
 Orange Tsai의 Blackhat발표글에 힌트가 존재한다.
